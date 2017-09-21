@@ -1,0 +1,39 @@
+<h2><i class="fa fa-fire"></i> Ajout d'un produit alimentaire au catalogue</h2>
+
+<form class="generic-form" method="POST" enctype="multipart/form-data"> <!-- A PARTIR DU MOMENT OU ON DECIDE D'UPLOAD AVEC TYPE: FILE, IL FAUT METTRE UN ENCTYPE-->
+
+    <aside class="error-message hidden">
+        <h3><i class="fa fa-warning"></i> Il y a <span id="js-total-error-count">1</span> erreur(s) dans le formulaire !</h3>
+        <p></p>
+    </aside>
+
+    <fieldset>
+        <legend><i class="fa fa-check"></i> Caractéristiques</legend>
+        <ul>
+            <li>
+                <label for="nomProduit">Nom :</label>
+                <input id="name" type="text" name="nomProduit" data-required data-name="nomProduit">
+            </li>
+            <li>
+                <label class="textarea" for="descriptionProduits">Description :</label>
+                <textarea id="description" name="descriptionProduits" rows="3"></textarea>
+            </li>
+            <li>
+                <label for="imageProduit">Photo :</label>
+                <input id="photo" name="imageProduit" type="file">
+            </li>
+            <li>
+                <label for="prixUnitaire">Prix de vente :</label>
+                <input id="prix" class="money" type="text" maxlength="5" name="salePrice" data-name="prixUnitaire" data-required>
+                <label for="prixUnitaire" class="no-width">€</label>
+            </li>
+        </ul>
+    </fieldset>
+
+    <ul>
+        <li>
+            <input class="button button-primary" type="submit" value="Ajouter">
+            <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
+        </li>
+    </ul>
+</form>

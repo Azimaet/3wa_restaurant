@@ -1,0 +1,71 @@
+<!-- Message de notification -->
+
+<!-- Code HTML à écrire -->
+<main>
+
+    <section class="flashBags">
+        <?php
+        if ($message->hasMessages()):
+        ?>
+
+        <p><?= $message->fetchMessage(); ?></p>
+
+        <?php
+        endif
+         ?>
+
+    </section>
+
+    <section class="bloc_gauche">
+        <article class="about">
+            <h1>La crêperie </br><strong>Grand-Ouest</strong></h1>
+            <p>
+                La crêperie Grand-Ouest, basée dans le centre de l'île de Nantes,
+                propose un assemblage des meilleurs produits du Grand-Ouest.
+                La carte étant articulée autour de la traditionnelle crêpe et galette bretonne,
+                le menu ajoute le terroir limitrophe à la Bretagne,
+                de la Loire-Atlantique à la Normandie...
+            </p>
+        </article>
+    </section>
+
+    <aside class="blocs_droite">
+
+        <section class="espacemembre">
+            <h2>Espace Membre</h2>
+
+        <?php
+        if (!$userSession->isAuthenticated()):
+         ?>
+            <a href="<?= $requestUrl ?>/inscription">Inscription</a>
+            <a href="<?= $requestUrl ?>/login">Connexion</a>
+        <?php
+        endif
+         ?>
+
+         <?php
+        if ($userSession->isAuthenticated()):
+         ?>
+             <p>Bonjour <strong><?= $userSession->getPrenom(); ?></strong> !</p>
+             <a href="<?= $requestUrl ?>/login">Mon Compte</a>
+             <a href="<?= $requestUrl ?>/Destroy">Déconnexion</a>
+         <?php
+         endif
+          ?>
+
+          <a href="<?= $requestUrl ?>/admin">ADMIN</a>
+        <hr>
+        <section class="alacarte">
+            <h2>À la Carte!</h2>
+            <article class="reservation">
+                <a href="<?= $requestUrl ?>/Reservation">Réserver sur Place</a>
+            </article>
+
+            <article class="commander">
+                <a href="<?= $requestUrl ?>/Carte">Commander à la Carte</a>
+            </article>
+
+        </section>
+    </aside>
+
+</main>

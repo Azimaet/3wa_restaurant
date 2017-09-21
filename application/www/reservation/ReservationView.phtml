@@ -1,0 +1,40 @@
+<main>
+    <form class="formPage"  method="post" action="">
+        <aside class="error-message hidden">
+                <h3><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h3>
+                <p><?php echo $form->getErrorMessage(); ?></p>
+        </aside>
+        <fieldset>
+            <h2><i class="fa fa-cutlery" aria-hidden="true"></i>Réservation d'une table</h2>
+
+            <ul>
+                <li>
+                    <label for="datePicked"> Date:</label>
+                    <input id="datetimepicker" name="datePicked" type="text" >
+                </li>
+
+                <li>
+                    <label for="prenom"> Couverts :</label>
+                    <select name="nbCouverts" data-required>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                         <option value="9">9</option>
+                         <option value="10">10</option>
+                    </select>
+                </li>
+
+                <li>
+                    <input class="bouton" type="submit" name="add" value="reservation">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <br>
+</main>
+<iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.127947201305!2d-1.5684261487174591!3d47.23364312155777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ec28adec8ba7%3A0x5efa3367b64e3730!2s1+Boulevard+Robert+Schuman%2C+44300+Nantes!5e0!3m2!1sfr!2sfr!4v1498035617218" width="80%"  frameborder="0" style="border:0" allowfullscreen></iframe>

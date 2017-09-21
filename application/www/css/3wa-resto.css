@@ -1,0 +1,449 @@
+/*******************************************************************
+********************** ALL *****************************************
+*******************************************************************/
+*
+{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfad92+0,c7a386+12,cdaf97+25,cfad92+50,be9574+65,c18e64+85,b57b51+100 */
+    background: #CFAD92;
+    background-image:url("../images/bg.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/*******************************************************************
+********************** HEADER **************************************
+*******************************************************************/
+
+header{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #3F2613;
+    color: white;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 12px;
+    padding: 0 1%;
+    text-decoration: none;
+}
+
+header section{
+    margin: 0 auto;
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+header a{
+    color: white;
+    padding: 0 1%;
+}
+
+header p{
+    color: white;
+    padding: 0 1%;
+}
+
+header strong{
+    color: #FFA700;
+}
+body.home header {
+    display: none;
+}
+/*******************************************************************
+********************** MAIN ***************************************
+*******************************************************************/
+
+main {
+ width: 80%;
+ margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.bloc_gauche{
+    text-align: justify;
+    width: 60%;
+    padding: 5%;
+}
+
+.bloc_gauche p {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 25px;
+    line-height: 2em;
+    color: white;
+}
+.bloc_gauche h1
+{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    font-style: normal;
+    text-align: center;
+    font-size: 60px;
+}
+
+.bloc_gauche strong{
+    color: #CF8800;
+    font-size: 80px;
+}
+
+.blocs_droite{
+    width: 35%;
+    background-color: white;
+    opacity: 0.9;
+    padding: 5%;
+    height: auto;
+    vertical-align: baseline;
+    box-shadow: 1px solid black;
+}
+.blocs_droite hr{
+    margin-top: 20%;
+}
+.espacemembre a{
+    padding: 5%;
+    margin: 5%;
+    width: auto%;
+    border-radius: 25px;
+    border: none;
+    background-color: #2AA14E;
+    color: white;
+    display: block;
+    transition-duration: 1s;
+}
+
+.espacemembre strong{
+    color: #FFA700;
+}
+.espacemembre a:hover{
+    background-color: #128936;
+    transition-duration: 1s;
+}
+
+.alacarte a{
+    padding: 5%;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    background-color: #DC4E38;
+    color: white;
+
+    transition-duration: 1s;
+}
+
+.alacarte a:hover{
+    background-color: #B92F19;
+    transition-duration: 1s;
+}
+
+
+.formPage .bouton{
+    padding: 3%;
+    width: 50%;
+    border-radius: 25px;
+    border: none;
+    background-color: #DC4E38;
+    color: white;
+    margin-top: 2%;
+    transition-duration: 1s;
+}
+
+.formPage .bouton:hover{
+    background-color: #B92F19;
+    transition-duration: 1s;
+}
+
+
+
+
+/************************************************************************
+********************** FORMULAIRE ***************************************
+*************************************************************************/
+
+.formPage{
+    width: 100%;
+    text-align: center;
+}
+.formPage fieldset
+{
+
+    color: white;
+    border-radius: 15px;
+    background-color: black;
+    opacity: 0.7;
+    border: none;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.formPage li{
+    width: 100%;
+}
+.formPage label{
+    width: 20%;
+    display: block;
+    float: left;
+}
+
+
+.formPage fieldset input {
+    border-radius: 2px;
+    color: black;
+    padding: 0.5%;
+    margin: 1%;
+    width: 70%;
+}
+
+.formPage fieldset legend
+{
+    color: #1E593B;
+    font-weight: bold;
+}
+
+#gmap{
+    display: block;
+    margin: 0 auto;
+}
+/*******************************************************************
+********************** CARTE ***************************************
+*******************************************************************/
+.pageMenu{
+    display: block;
+}
+.panierView{
+    background-color: #3F2613;
+    color: white;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    width: 30%;
+    margin: 1%;
+}
+.menu{
+    display: flex;
+}
+
+.vignette{
+    width: 20%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    max-height: 15%;
+}
+
+.vignette img{
+    width: 50%;;
+}
+
+/*******************************************************************
+********************** FOOTER ***************************************
+*******************************************************************/
+
+footer
+{
+    /* structure */
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    background-color: #3F2613;
+    color: white;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 12px;
+    padding: 0 1%;
+
+}
+
+
+
+/*******************************************************************************
+********************** TRUCS DU FRAMEWORK***************************************
+*******************************************************************************/
+
+
+/*
+ * Classes génériques
+ */
+.hidden
+{
+    display: none;
+}
+
+.large
+{
+    font-size: 125%;
+    vertical-align: bottom;
+}
+
+.layout-center
+{
+    text-align: center;
+}
+
+.layout-right
+{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.link-list,
+.generic-form ul
+{
+    /* structure */
+    padding-left: 0;
+    position: relative;
+
+    /* presentation */
+    list-style-type: none;
+}
+.link-list li
+{
+    display: inline-block;
+}
+
+.small
+{
+    font-size: 75%;
+    vertical-align: bottom;
+}
+
+
+/*
+ * CSS de l'interface utilisateur
+ */
+.user-interface
+{
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.user-interface .welcome
+{
+    display: inline-block;
+    margin: 0 1em;
+}
+.user-interface .welcome strong
+{
+    color: #EF4036;
+}
+
+
+/*
+ * CSS des tableaux listant des aliments
+ */
+.meal-list img
+{
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: opacity 0.25s;
+    vertical-align: middle;
+}
+.meal-list img + em
+{
+    margin-left: 1em;
+}
+.meal-list p
+{
+    text-align: justify;
+}
+.meal-list tr:hover img
+{
+    opacity: 1;
+}
+
+/*
+ * CSS de la page d'accueil
+ */
+.notice
+{
+    /* structure */
+    margin-bottom: 2em;
+
+    /* presentation */
+    background-color: rgba(208, 255, 255, 0.33);
+    border: 1px solid #339966;
+    border-radius: 6px;
+    color: #339966;
+    font-size: 1.33em;
+    text-align: center;
+}
+
+
+/*
+ * CSS de la page de commande
+ */
+.basket-empty
+{
+    color: #339966;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meal-details
+{
+    /* structure */
+    margin-right: 3em;
+    margin-top: 1em;
+    padding: 0.75em;
+
+    /* presentation */
+    background-color: #D0FFFF;
+    border-radius: 4px;
+    border: 1px solid #1E593B;
+}
+.meal-details:after
+{
+    clear: left;
+    content: ' ';
+    display: block;
+}
+.meal-details img
+{
+    float: left;
+    margin-right: 1em;
+}
+.meal-details p
+{
+    /* structure */
+    margin-top: 0;
+
+    /* presentation */
+    text-align: justify;
+}
+
+
+/*
+ * CSS de la page de récapitulatif de la commande
+ */
+.invoice
+{
+    /* structure */
+    margin: 2em 0 1em 50%;
+    padding: 0 1em;
+
+    /* presentation */
+    background-color: #D0FFFF;
+    border-radius: 4px;
+    border: 1px solid #1E593B;
+}
+.invoice .city
+{
+    text-transform: uppercase;
+}

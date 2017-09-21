@@ -1,0 +1,27 @@
+<!-- Liste des aliments -->
+<header>
+
+</header>
+<main>
+    <section class="pageMenu">
+        <section class="panierView">
+
+        </section>
+
+        <section class="menu">
+            <?php foreach ($plats as $key => $plat): ?>
+
+                <ul class="vignette">
+                    <li><img src="<?= $wwwUrl ?>/images/imagesPlats/<?= $plat['imageProduit']; ?>" alt="photo"></li>
+                    <li> <?= $plat['nomProduit']; ?></li>
+                    <li> <?= $plat['prixUnitaire']; ?></li>
+                    <li> <?= $plat['descriptionProduits']; ?></li>
+                    <button class="ajoutpanier" type="button" name="button" data-index="<?= $plat['idProduit']; ?>" data-prix="<?= $plat['prixUnitaire']; ?>">
+                        <i class="fa fa-plus-square" aria-hidden="true"></i>
+                    </button>
+                </ul>
+
+            <?php endforeach ?>
+        </section>
+    </section>
+</main>

@@ -1,0 +1,21 @@
+<section>
+    <a href="<?= $requestUrl ?>"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+<?php
+if (!$userSession->isAuthenticated()):
+ ?>
+    <a href="<?= $requestUrl ?>/inscription">Inscription</a>
+    <a href="<?= $requestUrl ?>/login">Connexion</a>
+<?php
+endif
+ ?>
+
+ <?php
+if ($userSession->isAuthenticated()):
+ ?>
+     <p>Bonjour <strong><?= $userSession->getPrenom(); ?></strong> !</p>
+     <a href="<?= $requestUrl ?>/login"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+     <a href="<?= $requestUrl ?>/Destroy">Déconnexion</a>
+ <?php
+ endif
+  ?>
+</section>

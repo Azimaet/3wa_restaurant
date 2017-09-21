@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3WA Restaurant</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/3wa-resto.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-button.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-form.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-table.css">
+    <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> <!-- ecriture mano-->
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Wire+One" rel="stylesheet">
+    <link href="<?= $wwwUrl ?>/js/vendor/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet">
+    <!-- Librairie jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+    <script src="<?= $wwwUrl ?>/js/formValidator.js"></script>
+    <script src="<?= $wwwUrl ?>/js/vendor/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+    <script src="<?= $wwwUrl ?>/js/classes/OrderForm.class.js"></script>
+    <script src="<?= $wwwUrl ?>/js/classes/Panier.class.js"></script>
+</head>
+<body <?php if (isset($bodyclass)) echo 'class="'.$bodyclass.'"'; ?>>
+<header>
+    <section>
+        <a href="<?= $requestUrl ?>"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+    <?php
+    if (!$userSession->isAuthenticated()):
+     ?>
+        <a href="<?= $requestUrl ?>/inscription">Inscription</a>
+        <a href="<?= $requestUrl ?>/login">Connexion</a>
+    <?php
+    endif
+     ?>
+
+     <?php
+    if ($userSession->isAuthenticated()):
+     ?>
+         <p>Bonjour <strong><?= $userSession->getPrenom(); ?></strong> !</p>
+         <a href="<?= $requestUrl ?>/login"><i class="fa fa-user fa-2x" aria-hidden="true"></i></a>
+         <a href="<?= $requestUrl ?>/Destroy">Déconnexion</a>
+     <?php
+     endif
+      ?>
+    </section>
+
+</header>
+    <!-- Affichage du template lié à la vue -->
+    <?php include $this->viewData['template'] ?>
+
+<!-- Pied de page commun -->
+<footer>
+    <p>La Crêperie Grand-Ouest | Tous Droits Reservés | 13 Rue du Phare de La Vieille - 44300 NANTES</p>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>

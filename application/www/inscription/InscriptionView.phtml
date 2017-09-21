@@ -1,0 +1,66 @@
+<header>
+
+</header>
+
+<main>
+    <form class="formPage" method="post" data-validation="true">
+        <aside class="error-message hidden">
+                <h3><i class="fa fa-warning"></i> Il y a <em class="total-error-count">1</em> erreur(s) dans le formulaire !</h3>
+                <p><?php echo $form->getErrorMessage(); ?></p>
+        </aside>
+        <fieldset>
+            <h2>Inscrivez-Vous!</h2>
+            <ul>
+                <li>
+                    <label for="nom"> Nom :</label>
+                    <input type="text" id="nom" name="nom" data-required data-length="3" data-name="Nom" placeholder="Tapez votre Nom" value="<?= $nom ;?>">
+                </li>
+
+                <li>
+                    <label for="prenom"> Prenom :</label>
+                    <input type="text" id="prenom" name="prenom" data-required data-length="3" data-name="Prenom" placeholder="Tapez votre Prenom" value="<?= $prenom; ?>">
+                </li>
+                <li>
+                    <label for="email"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></label>
+                    <input type="text" id="email" name="email" data-required data-name="Email" data-type="email" placeholder="Saisissez votre Email" value="<?= $email; ?>">
+                </li>
+
+                <li>
+                    <label for="password"><i class="fa fa-lock fa-2x" aria-hidden="true"></i></label>
+                    <input type="password" id="password" name="password" data-required data-name="Mot de Passe" data-password placeholder="Saisissez votre Mot de Passe" value="<?= $password; ?>">
+                </li>
+
+                <li>
+                    <label for="password"><i class="fa fa-check fa-2x" aria-hidden="true"></i></label>
+                    <input type="password" id="password" name="password" data-required data-name="Mot de Passe" data-type="password" data-password placeholder="Vérifiez votre Mot de Passe" value="<?= $password; ?>">
+                </li>
+
+                <li>
+                    <label for="phone"><i class="fa fa-phone-square fa-2x" aria-hidden="true"></i></label>
+                    <input type="text" id="phone" name="phone" data-required data-name="Télephone" data-type="number" placeholder="Saisissez votre numéro de Téléphone" value="<?= $phone; ?>">
+                </li>
+
+                <li>
+                    <label for="adresse"><i class="fa fa-location-arrow fa-2x" aria-hidden="true"></i></label>
+                    <input type="text" id="adresse" name="adresse" data-required data-name="Adresse" placeholder="Saisissez votre Adresse" value="<?= $adresse; ?>">
+                </li>
+
+                <li>
+                    <label for="cp">CP</label>
+                    <input type="text" id="cp" name="cp" data-required data-name="Code Postal" placeholder="Saisissez votre Code Postal" value="<?= $cp; ?>">
+                </li>
+
+                <li>
+                    <label for="ville"><i class="fa fa-building-o fa-2x" aria-hidden="true"></i></label>
+                    <input type="text" id="ville" name="ville" data-required data-name="Ville" placeholder="Renseignez votre ville" value="<?= $ville; ?>">
+                </li>
+
+
+
+                <li>
+                    <input class="bouton" type="submit" name="add" value="inscription">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</main>

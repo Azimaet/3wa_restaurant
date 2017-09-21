@@ -1,0 +1,21 @@
+
+    <h2>Panier</h2>
+    <?php
+    if (isset($panier)) :
+    ?>
+        <?php
+        foreach ($panier as $platRecap) :
+         ?>
+        <p> <?= $platRecap["nomProduit"]?>  x <strong><?= $platRecap["qte"]?></strong></p>
+
+        <?php
+    endforeach;
+         ?>
+
+     <?php
+ endif;
+      ?>
+
+<button type="submit" name="button" id="validationCmd">
+    Valider
+</button>
